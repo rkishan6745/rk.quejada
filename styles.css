@@ -1,0 +1,101 @@
+body {
+    background: #f2f6fc;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    background: #e5dfda;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 32px 28px 24px 28px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.15);
+}
+
+h2 {
+    text-align: center;
+    color: #2d3a4b;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #34495e;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #bfc9d1;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background: #f7fafd;
+    margin-bottom: 2px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+    background: #eef5fb;
+}
+
+.gender-options,
+.sdg-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.gender-options label,
+.sdg-options label {
+    font-weight: 400;
+    font-size: 0.98rem;
+    color: #2d3a4b;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 6px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.25s, box-shadow 0.25s;
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.08);
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background: #357ab7;
+    box-shadow: 0 4px 16px rgba(74, 144, 226, 0.18);
+}
+
+media (max-width: 500px) {
+    .form-container {
+        padding: 18px 8px 14px 8px;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+}

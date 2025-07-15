@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="2. styles.css" />
+  
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <input type="checkbox" id="toggle" />
+
+    <div class="display">
+      <label for="toggle">
+        <div class="circle">
+          <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+          </svg>
+          <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
+          </svg>
+        </div>
+      </label>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="animated-home">
+      <h2>Home</h2>
+      <p class="intro-text">
+        Welcome to my portfolio! Here, you'll discover a collection of creative projects that reflect my passion for both design and technology. My work covers a range of important topics:
+      </p>
+      <ul class="topics-list">
+        <li><strong>Climate Action (SDG 13):</strong> Explore projects that promote awareness and urgent solutions to address climate change and build a sustainable future.</li>
+        <li><strong>Sustainable Development Goals (SDGs):</strong> Learn about the 17 global goals that aim to end poverty, protect the planet, and ensure prosperity for all by 2030.</li>
+        <li><strong>Periodic Table of Elements:</strong> Dive into the fascinating world of chemistry by exploring the properties and significance of each element.</li>
+        <li><strong>Community Engagement:</strong> Find out how you can get involved, choose an SDG you care about, and take action for a better world.</li>
+      </ul>
+      <p class="outro-text">
+        Use the menu above to navigate through my projects and get in touch. I hope you find inspiration and useful information as you explore!
+      </p>
+
+      <!-- Image Cards Grid -->
+      <div class="image-card-grid">
+        <div class="image-card" tabindex="0" aria-label="Climate Action Image Card">
+          <img src="IMG CRD 1.png" alt="Climate Action Illustration" />
+          <div class="card-overlay">
+            <h3>Climate Action</h3>
+            <p>Promoting awareness and urgent solutions to climate change.</p>
+          </div>
+        </div>
+
+        <div class="image-card" tabindex="0" aria-label="Sustainable Development Goals Image Card">
+          <img src="IMG CRD 2.png" alt="Sustainable Development Goals Illustration" />
+          <div class="card-overlay">
+            <h3>Sustainable Development Goals</h3>
+            <p>Learn about the 17 global goals for a better future.</p>
+          </div>
+        </div>
+
+        <div class="image-card" tabindex="0" aria-label="Periodic Table Image Card">
+          <img src="IMG CRD 3.png" alt="Periodic Table Illustration" />
+          <div class="card-overlay">
+            <h3>Periodic Table</h3>
+            <p>Explore the fascinating world of chemical elements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 align = "center">About Me</h2>
+      <iframe src="resume.html" width="100%" height="600px" style="border: none;"></iframe>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+  <h2 align="center">My Projects</h2>
+  <div class="project-grid">
+
+    <div class="flip-card card card-yellow" data-tooltip="Urgent climate action for a sustainable future.">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>Project A</h3>
+          <p>This project supports SDG 13: Climate Action, promoting awareness and action against climate change. It highlights the need for urgent solutions to protect our planet and build a sustainable future.</p>
+        </div>
+        <div class="flip-card-back">
+          <h3>More about Project A</h3>
+          <p>Explore detailed insights and results of this climate action initiative.</p>
+        </div>
+      </div>
+      <!-- Separate container for the link -->
+      <div class="project-link-container">
+        <a href="WEBPAGE 1.html" class="view-button">Click here</a>
+      </div>
+    </div>
+
+    <div class="flip-card card card-yellow" data-tooltip="Explore all 17 Sustainable Development Goals.">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>Project B</h3>
+          <p>This project highlights all 17 Sustainable Development Goals (SDGs) — a united global effort to end poverty, protect the planet, and ensure peace and prosperity for everyone by 2030.</p>
+        </div>
+        <div class="flip-card-back">
+          <h3>More about Project B</h3>
+          <p>Explore detailed insights and results About Sustainable Development Goals.</p>
+        </div>
+      </div>
+      <!-- Separate container for the link -->
+      <div class="project-link-container">
+        <a href="WEBPAGE 2.html" class="view-button">Click here</a>
+      </div>
+    </div>
+
+    <div class="flip-card card card-yellow" data-tooltip="Interactive Periodic Table of Elements.">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>Project C</h3>
+          <p>This project explores the Periodic Table of Elements, showcasing the properties, categories, and significance of each element in science, technology, and daily life.</p>
+        </div>
+        <div class="flip-card-back">
+          <h3>More about Project C</h3>
+          <p>explores the Periodic Table of Elements, showcasing each elements.</p>
+        </div>
+      </div>
+      <!-- Separate container for the link -->
+      <div class="project-link-container">
+        <a href="LAB 3 ACTIVITY.html" class="view-button">Click here</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 align="center">Contact Me</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button> 
+        <p id="response"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Raina Kishan S. Quejada </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Dark mode toggle
+    const darkModeCheckbox = document.getElementById('toggle');
+    darkModeCheckbox.addEventListener('change', function() {
+      document.body.classList.toggle('dark-mode', this.checked);
+    });
+
+    // Contact form submission to Google Apps Script with confirmation boxes
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxojSi7ep_WIUayCFFF-9qXsj9m-6wpQsMw7n4vYCXzRgUSDRjSvNeB_SzqR4mL2Ce8/exec";
+    const form = document.getElementById("contact-form");
+    const responseMsg = document.getElementById("response");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Simple client-side validation
+      let valid = true;
+      ['name', 'email', 'message'].forEach(id => {
+        const field = document.getElementById(id);
+        field.classList.remove('error');
+        if (!field.value.trim()) {
+          field.classList.add('error');
+          valid = false;
+        }
+      });
+
+      const emailField = document.getElementById('email');
+      if (emailField.value && !emailField.value.includes('@')) {
+        emailField.classList.add('error');
+        valid = false;
+        responseMsg.style.color = 'red';
+        responseMsg.textContent = "Please enter a valid email address including '@'.";
+        return;
+      }
+
+      if (!valid) {
+        responseMsg.style.color = 'red';
+        responseMsg.textContent = "Please fill out all fields correctly.";
+        return;
+      }
+
+      // Confirmation before sending
+      if (confirm("Are you sure you want to submit the form?")) {
+        // Submit form data
+        fetch(scriptURL, {
+          method: "POST",
+          body: new URLSearchParams(new FormData(form))
+        })
+        .then(response => response.json())
+        .then(data => {
+          alert("Your message has been sent successfully!");
+          responseMsg.style.color = 'green';
+          responseMsg.textContent = "Message sent successfully!";
+          form.reset();
+        })
+        .catch(error => {
+          alert("There was an error sending your message.");
+          responseMsg.style.color = 'red';
+          responseMsg.textContent = "Error sending message.";
+          console.error("Error!", error.message);
+        });
+      } else {
+        responseMsg.style.color = 'red';
+        responseMsg.textContent = "Submission cancelled.";
+      }
+    });
+	document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.flip-card');
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, observerOptions);
+
+  cards.forEach(card => observer.observe(card));
+});
+
+	
+  </script>
+</body>
+</html>

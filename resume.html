@@ -1,0 +1,344 @@
+<html>
+<head>
+
+  <title>Resume</title>
+  <style>
+ 
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      max-width: 960px;
+      margin: 60px auto 40px;
+      padding: 0 20px;
+    }
+
+    aside.sidebar {
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+    }
+    aside.sidebar h2 {
+      margin: 0 0 15px 0;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #2980b9;
+      border-bottom: 3px solid #2980b9;
+      padding-bottom: 6px;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    aside.sidebar ul li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+    aside.sidebar ul li svg {
+      width: 20px;
+      height: 20px;
+      fill: #2980b9;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+
+    .skill {
+      margin-bottom: 18px;
+    }
+    .skill-name {
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .skill-bar {
+      background: #dce6f1;
+      border-radius: 10px;
+      height: 12px;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      background: #2980b9;
+      height: 100%;
+      width: 0;
+      border-radius: 10px;
+      transition: width 1.2s ease;
+    }
+
+
+    section.content {
+      background: #fff;
+      padding: 30px 35px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+
+    header.resume-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header.resume-header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #2980b9;
+      letter-spacing: 1.2px;
+    }
+    header.resume-header p {
+      margin-top: 8px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #555;
+      font-style: italic;
+    }
+
+
+    .timeline {
+      position: relative;
+      margin-left: 20px;
+      padding-left: 30px;
+      border-left: 3px solid #2980b9;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -13px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      background: #2980b9;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 5px rgba(41, 128, 185, 0.7);
+    }
+    .timeline-item h3 {
+      margin: 0 0 6px 0;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #1c3d5a;
+    }
+    .timeline-item span {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      font-style: italic;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .timeline-item p {
+      margin: 0;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        margin: 100px 15px 40px;
+      }
+      aside.sidebar {
+        position: static;
+        height: auto;
+        padding: 25px 20px;
+        margin-bottom: 35px;
+      }
+      section.content {
+        padding: 25px 20px;
+      }
+      header.resume-header h1 {
+        font-size: 2.2rem;
+      }
+      header.resume-header p {
+        font-size: 1rem;
+      }
+      .timeline {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+      }
+      .timeline-item::before {
+        left: -5px;
+      }
+    }
+	.avatar {
+	justify-content: center;;
+	width: 130px;
+	height: 120px;
+	border-radius: 50%;
+}
+
+
+    .skill-bar-fill.animate {
+      width: var(--skill-level);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container" role="main" aria-label="Resume of Raina Quejada">
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Contact information and skills">
+      <section aria-labelledby="contact-title">
+	  <img src="quejada.jpg" alt="Avatar" class="avatar">
+        <h2 id="contact-title">Contact</h2>
+        <ul>
+          <li>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <a href="mailto:202410663@fit.edu.ph">raina.quejada@gmail.com</a>
+          </li>
+          <li>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.7.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.7 1 1 0 01-.21 1.11l-2.26 2.26z"/></svg>
+            <a href="tel:+63 945 750 0700">+63 945 750 0700</a>
+          </li>
+          <li>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 3.87 7 13 7 13s7-9.13 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+            520 Santiago St., San Pascual, Obando, Bulacan
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <div class="skill">
+          <div class="skill-name">Able to communicate effectively with others</div>
+          <div class="skill-bar" aria-label="HTML5 and CSS3 skill level">
+            <div class="skill-bar-fill" style="--skill-level: 70%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name"> Open to new ideas and willing to learn new ways of doing things </div>
+          <div class="skill-bar" aria-label="JavaScript skill level">
+            <div class="skill-bar-fill" style="--skill-level: 65%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Independent and self-reliant but also a team player </div>
+          <div class="skill-bar" aria-label="Python skill level">
+            <div class="skill-bar-fill" style="--skill-level: 80%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Flexible mindset for workplace flexibility</div>
+          <div class="skill-bar" aria-label="Microsoft Office skill level">
+            <div class="skill-bar-fill" style="--skill-level: 90%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Able to lead a team and work well in a team</div>
+          <div class="skill-bar" aria-label="Basic Networking skill level">
+            <div class="skill-bar-fill" style="--skill-level: 75%;"></div>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <!-- Main content -->
+    <section class="content" aria-label="Main resume content">
+      <header class="resume-header">
+        <h1 align = "left">RAINA KISHAN S. QUEJADA</h1>
+        <p align = "left">First Year BSITCST Student | FEU Institute of Technology</p>
+      </header>
+
+      <!-- Education Timeline -->
+      <article class="timeline" aria-labelledby="education-title" style="margin-top: 50px;">
+        <h2 id="education-title" style="color:#2980b9; margin-bottom: 30px; font-weight: 700; font-size: 1.8rem;">Educational Attainment</h2>
+
+        <div class="timeline-item">
+          <h3>Tertiary | Bachelor of Science in Information Technology with Specialization in Cybersecurity</h3>
+          <span> FEU Institute of Technology | 2024 - Present</span>
+		  <h3>Secondary | Science, Technology Engineering, and Mathematics</h3>
+		  <span> FEU High School | 2022 - 2024 </span>
+		  <h3>Secondary | Junior High School </h3>
+		  <span> St. Mary's College of Meycauayan | 2018 - 2022 </span>
+		  <h3>Primary School</h3>
+		  <span> St. Mary's College of Meycauayan | 2012 - 2018 </span>
+          
+        </div>
+      </article>
+	  
+	  <!-- Experience / Relevant Coursework Timeline -->
+      <article class="timeline" aria-labelledby="experience-title">
+        <h2 id="experience-title" style="color:#2980b9; margin-bottom: 30px; font-weight: 700; font-size: 1.8rem;">Membership & Organization</h2>
+
+        <div class="timeline-item">
+          <h3> FEU Tech Alliance of Information Technology Students</h3>
+          <span>2024 - Present</span>
+          <p>FEU Institute of Technology</p>
+        </div>
+
+      </article>
+
+
+      <!-- Projects Timeline -->
+      <article class="timeline" aria-labelledby="projects-title" style="margin-top: 50px;">
+        <h2 id="projects-title" style="color:#2980b9; margin-bottom: 30px; font-weight: 700; font-size: 1.8rem;">Certifications</h2>
+
+        <div class="timeline-item">
+          <h3>Introduction to Cybersecurity</h3>
+		  <span> April 15, 2024 </span>
+          <p> Cisco Networking Academy <p>
+        </div>
+		
+		<div class="timeline-item">
+          <h3>Introduction to Packet Tracer</h3>
+		  <span> April 15, 2024 </span>
+          <p> Cisco Networking Academy <p>
+        </div>
+
+
+      </article>
+    </section>
+  </main>
+
+  <script>
+    // Animate skill bars on page load
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+        const level = getComputedStyle(bar).getPropertyValue('--skill-level');
+        bar.style.width = level;
+      });
+    });
+  </script>
+</body>
+</html>
